@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: Titulo;
+    src: url(Fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+    font-display: block;
+}
+
+@font-face {
+    font-family: SubTitulo;
+    src: url(Fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+    font-display: block;
+}
+
+@font-face {
+    font-family: Texto;
+    src: url(Fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+    font-display: block;
+}
+
+@font-face {
+    font-family: Links;
+    src: url(Fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+    font-display: block;
+}
+
+@font-face {
+    font-family: Texto-2;
+    src: url(Fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+    font-display: block;
+}
+
+@font-face {
+    font-family: Texto-3;
+    src: url(Fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+    font-display: block;
+}
+
+:root {
+    /*Modo Claro*/
+    --clear: rgba(255, 255, 255, 0.9);
+    --clear-nav: rgba(255, 255, 255, 0.75);
+    --text-1: #ffffff;
+    --text-2: #222222;
+    --background-1: #ffffff;
+    --background-2: #262626;
+    --clear-btn-1: rgba(0, 0, 0, 0.2);
+
+    /*Modo Oscuro*/
+    --dark-clear: rgba(32, 32, 32, 0.9);
+    --dark-clear-nav: rgba(32, 32, 32, 0.75);
+    --dark-text-1: #ffffff;
+    --dark-text-2: #ffffff;
+    --dark-background-1: #111111;
+    --dark-background-2: #262626;
+    --dark-clear-btn-1: rgba(255, 255, 255, 0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body {
+    background: var(--background-1);
+    overflow-x: hidden;
+    transition: all 400ms;
+
+}
+
+.Contenido {
+    /*background: #1b1b1b;*/
+}
+
+h1 {
+    font-family: 'Titulo';
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-family: 'Subtitulo';
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: 'Texto';
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-family: 'Links';
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+h5 {
+    font-family: 'Titulo';
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h6 {
+    font-family: 'Titulo';
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+time {
+    font-family: 'Texto';
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+figcaption {
+    font-family: 'Texto';
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+a {
+    font-family: 'Links';
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-right: auto;
+}
+
+p {
+    font-family: 'Texto';
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+blockquote {
+    font-family: 'Texto';
+    font-size: 2.2rem;
+}
+
+cite {
+    font-family: 'Subtitulo';
+    font-style: italic;
+    font-size: 2rem;
+    display: block;
+}
+
+date {
+    font-family: 'Links';
+    font-size: 1.2rem;
+    left: 0;
+    color: #777;
+}
+
+b {
+    font-family: 'Texto-3';
+}
+
+figcaption {
+    font-family: 'Texto-2';
+    font-size: 1rem;
+}
+
+@media (max-width: 8.5in) {
+    :root {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 5.5in) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+/*Seccion de Navegacion*/
+#Header {
+    width: 100%;
+    z-index: 2;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    width: 100%;
+    color: var(--text-2);
+    background-color: var(--clear-nav);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    float: left;
+    padding-left: 1rem;
+}
+
+.nav-buttons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    padding-right: 1rem;
+}
+
+/*Seccion del Parallax */
+#Parallax {
+    height: auto;
+    min-height: 120vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.parallax_content {
+    height: 100%;
+    width: 100%;
+}
+
+.parallax_image {
+    width: 100%;
+    height: 120vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.parallax_image img {
+    width: 100%;
+    height: auto;
+}
+
+.parallax_text {
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40vh;
+    padding: 1rem 20%;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#txt-parallax-1 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--text-1);
+}
+
+#txt-parallax-2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 2rem;
+    color: var(--text-1);
+
+}
+
+#txt-parallax-3 {
+    font-size: 4rem;
+    font-weight: 300;
+    transform: rotate(90deg);
+    margin-top: 2rem;
+    color: var(--text-1);
+    text-decoration: none;
+}
+
+
+/*Seccion de los Contenidos*/
+#Article {
+    height: auto;
+    min-height: 150vh;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 5% 10% [Inicio] 10% 50% 10% [Final] 10% 5%;
+    background-color: #ffffff;
+}
+
+.article_section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    min-height: 40vh;
+}
+
+.article_img {
+    width: 100%;
+    height: 100%;
+}
+
+#Sobre_Nosotros {
+    grid-column: 2/7;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#team_picture {
+    width: 40%;
+    height: 80%;
+    object-fit: cover;
+}
+
+#team_text {
+    height: auto;
+    width: 50%;
+    padding: 1rem 2rem;
+}
+
+/*Seccion del Footee*/
+#Footer {
+    height: auto;
+    min-height: 20vh;
+    width: 100%;
+    background-color: #222222;
+    z-index: 1;
+}
+
+/*Animacion Botones*/
+.button {
+    display: inline-block;
+    padding: 0.65em 1.6em;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s;
+    position: relative;
+    color: var(--text-2);
+}
+
+.button:hover {
+    background-color: var(--clear-btn-1);
+    color: #000000;
+    border: 1px solid var(--text-2);
+}
