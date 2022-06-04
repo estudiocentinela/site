@@ -7,83 +7,218 @@
     <title>EstudioCentinela</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
 
     <meta name="author" content="Andrés Roberto Gardea Jiménez">
 
     <link rel="shortcut icon" href="Multimedia/Icon.ico" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDQH3SS60G"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KDQH3SS60G');
+    </script>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 
 <body data-barba="wrapper">
 
-    <div class="Contenido" data-scroll-container>
-        <main data-barba="container" data-barba-namespace="index">
 
-            <section id="Header">
-                <header class="header">
-                    <h1 id="logo">EstudioCentinela</h1>
-                    <nav class="nav-container">
-                        <div class="nav-buttons">
-                            <div class="nav-btn"><a href="#Inicio" class="button">Inicio</a>
-                            </div>
-                            <div class="nav-btn"><a href="#Sobre_Nosotros" class="button">Sobre Nosotros</a>
-                            </div>
-                            <div class="nav-btn"><a href="#Portafolio" class="button">Portafolio</a>
-                            </div>
-                            <div class="nav-btn"><a href="#Contacto" class="button">Contacto</a>
-                            </div>
+    <main data-barba="container" data-barba-namespace="index">
+
+        <section id="Header">
+            <header class="header_bar" id="nav">
+                <h1 id="logo">EstudioCentinela</h1>
+
+                <div class="icon__menu">
+                    <i class="fas fa-bars" id="btn_open"></i>
+                </div>
+            </header>
+
+            <nav id="Nav" class="nav_container nav_open">
+                <ul class="nav_content">
+
+                    <li class="nav_button">
+                        <div class="nav_button_content">
+                            <i class="fa-solid fa-house"></i>
+                            <a href="#" class="nav_btn">Inicio</a>
                         </div>
-                        <div class="nav-social"></div>
-                    </nav>
-                </header>
-            </section>
+                    </li>
 
-            <section id="Parallax">
-                <div id="Inicio" class="parallax_content">
-                    <div class="parallax_text">
-                        <h2 id="txt-parallax-1" class="parallax-text">
-                            EstudioCentinela</h2>
-                        <p id="txt-parallax-2" class="parallax-text">Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Maxime, nam.</p>
-                        <div class="btn-parallax">
-                            <a href="#Sobre_Nosotros">
-                                <h4 id="txt-parallax-3">»</h4>
-                            </a>
+                    <li class="nav_button">
+                        <div class="nav_button_content">
+                            <i class="fa-solid fa-user-group"></i>
+                            <a href="#Sobre_Nosotros" class="nav_btn">Sobre Nosotros</a>
                         </div>
-                    </div>
-                    <div class="parallax_image">
-                        <img data-scroll data-scroll-sticky data-scroll-target="#parallax" src="Multimedia/Example.webp"
-                            alt=""></img>
+                    </li>
+
+
+                    <li class="nav_button">
+                        <div class="nav_button_content">
+                            <i class="fa-solid fa-folder"></i>
+                            <a href="#Trabajos" class="nav_btn">Nuestros Trabajos</a>
+                        </div>
+                    </li>
+
+                    <li class="nav_button list__item--click">
+                        <div class="nav_button_content list__button--click">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <a class="nav_btn">Portafolios</a>
+                            <i class="fa-solid fa-chevron-right list__arrow"></i>
+                        </div>
+
+                        <ul class="nav_show">
+                            <li class="nav_show_inside">
+                                <a href="#Portafolio_Azul" class="nav_btn button nav__link--inside">Azul</a>
+                            </li>
+
+                            <li class="nav_show_inside">
+                                <a href="#Portafolio_Andy" class="nav_btn button nav__link--inside">Andres</a>
+                            </li>
+
+                            <li class="nav_show_inside">
+                                <a href="#Portafolio_Andres" class="nav_btn button nav__link--inside">Andres G.</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav_button list__item--click">
+                        <div class="nav_button_content list__button--click">
+                            <i class="fa-solid fa-address-card"></i>
+                            <a class="nav_btn">Contacto</a>
+                            <i class="fa-solid fa-chevron-right list__arrow"></i>
+                        </div>
+
+                        <ul class="nav_show">
+                            <li class="nav_show_inside">
+                                <a href="https://www.instagram.com/estudiocentinela/" target="new"
+                                    class="nav_btn button nav__link--inside">Instagram<i
+                                        class="fa-brands fa-instagram"></i></a>
+                            </li>
+
+                            <li class="nav_show_inside">
+                                <a href="https://www.facebook.com/Centinela-103790222361926" target="new"
+                                    class="nav_btn button nav__link--inside">Facebook<i
+                                        class="fa-brands fa-facebook"></i></a>
+                            </li>
+
+                            <li class="nav_show_inside">
+                                <a href="mailto:estudiocentinela.art@gmail.com"
+                                    class="nav_btn button nav__link--inside">Correo
+                                    Electronico<i class="fa-solid fa-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </section>
+
+        <section id="Parallax">
+            <div id="Inicio" class="parallax_content">
+                <div class="parallax_text">
+                    <h2 id="txt-parallax-1" class="parallax-text">
+                        EstudioCentinela</h2>
+                    <p id="txt-parallax-2" class="parallax-text">Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Maxime, nam.</p>
+                    <div class="btn-parallax">
+                        <a href="#Sobre_Nosotros">
+                            <h4 id="txt-parallax-3">»</h4>
+                        </a>
                     </div>
                 </div>
-            </section>
+                <div class="parallax_image">
+                    <img data-scroll data-scroll-sticky data-scroll-target="#parallax" src="Multimedia/Example.webp"
+                        alt=""></img>
+                </div>
+            </div>
+        </section>
 
-            <section id="Article">
-                <div id="Sobre_Nosotros" class="article_section">
-                    <div id="team_picture">
-                        <img class="article_img" src="Multimedia/Example.webp" alt="">
+        <section id="Article">
+            <div id="Sobre_Nosotros" class="article_section">
+                <div id="team_picture">
+                    <img class="article_img" src="Multimedia/Example.webp" alt="">
+                </div>
+                <div id="team_text">
+                    <h2>Nuestro Equipo</h2>
+                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repellat alias
+                        quasi
+                        nemo cum quis, quaerat minima commodi recusandae veritatis.</blockquote>
+                    <cite>— Generador de Texto </cite>
+                </div>
+            </div>
+            <div id="Trabajos" class="article_section">
+            </div>
+            <div id="Portafolio" class="article_section">
+                <div class="individual_port" id="Portafolio_Azul">
+                    <div class="port_gallery_1">
+                        <img src="Multimedia/Example.webp" alt="">
+                        <img src="Multimedia/Example.webp" alt="">
+                        <img src="Multimedia/Example.webp" alt="">
+                        <img src="Multimedia/Example.webp" alt="">
+                        <img src="Multimedia/Example.webp" alt="">
+                        <img src="Multimedia/Example.webp" alt="">
+                        <img src="Multimedia/Example.webp" alt="">
+                        <img src="Multimedia/Example.webp" alt="">
                     </div>
-                    <div id="team_text">
-                        <h2>Nuestro Equipo</h2>
-                        <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repellat alias
-                            quasi
-                            nemo cum quis, quaerat minima commodi recusandae veritatis.</blockquote>
-                        <cite>— Generador de Texto </cite>
+
+                    <div class="port_text_1">
+                        <h2>Portafolio de:</h2>
                     </div>
                 </div>
-                <div id="Portafolio" class="article_section">
 
+                <div class="individual_port" id="Portafolio_Andy">
+                    <div class="port_gallery_2">
+                        <img src="Multimedia/Example.webp" alt="">
+                        <img src="Multimedia/Example.webp" alt="">
+                        <img src="Multimedia/Example.webp" alt="">
+                        <img src="Multimedia/Example.webp" alt="">
+                    </div>
+
+                    <div class="port_text_2">
+
+                    </div>
                 </div>
-                <div id="Contacto" class="article_section">
 
+                <div class="individual_port" id="Portafolio_Andres">
+                    <div class="port_text_2">
+
+                    </div>
+
+                    <div class="port_gallery_2">
+                        <img src="Multimedia/Example.webp" alt="">
+                        <img src="Multimedia/Example.webp" alt="">
+                        <img src="Multimedia/Example.webp" alt="">
+                        <img src="Multimedia/Example.webp" alt="">
+                    </div>
                 </div>
-            </section>
+            </div>
+            <div id="Contacto" class="article_section">
+                <div class="contact_img_1">
+                    <img src="Multimedia/Example.webp" alt="">
+                </div>
+                <div class="contact_text">
+                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit.</blockquote>
+                    <cite>— Text Generator</cite>
+                </div>
+                <div class="contact_img_2"><img src="Multimedia/Example.webp" alt=""></div>
+            </div>
+        </section>
 
-            <section id="Footer">
+        <section id="Footer">
+            <div class="footer_bottom"><p>Pagina hecha por: Andres Gardea</p></div>
 
-            </section>
-        </main>
-    </div>
+        </section>
+    </main>
+
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>
