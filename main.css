@@ -171,8 +171,19 @@ figcaption {
 #logo {
     float: left;
     padding-left: 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: flex-start;
+    gap: .5rem;
 }
 
+.nav_icon{
+    height: 2.5rem;
+    width: 2.5rem;
+    object-fit: cover;
+}
 
 .icon__menu {
     width: 4rem;
@@ -375,12 +386,6 @@ figcaption {
     min-height: 40vh;
 }
 
-.article_img {
-    width: 100%;
-    height: 100%;
-}
-
-
 /*Seccion de Presentacion*/
 
 #Sobre_Nosotros {
@@ -397,6 +402,11 @@ figcaption {
     width: 40%;
     height: 80%;
     object-fit: cover;
+}
+
+#team_picture img{
+    width: 100%;
+    height: auto;
 }
 
 #team_text {
@@ -577,7 +587,7 @@ figcaption {
 
 .contact_img_1 img,
 .contact_img_2 img {
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
@@ -596,17 +606,19 @@ figcaption {
 @media (max-width: 5.5in) {
     #Contacto {
         grid-column: 1/8;
-        min-height: auto;
+        min-height: 100vh;
+        max-height: 300vh;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-content: center;
         align-items: center;
         justify-content: space-around;
         gap: .5rem;
+        overflow: hidden;
     }
 
     .contact_img_1 {
-        height: 70vh;
+        height: 50vh;
         width: 98%;
         overflow: hidden;
     }
@@ -614,6 +626,7 @@ figcaption {
     .contact_img_2 {
         height: 50vh;
         width: 98%;
+        display: none;
     }
 
     .contact_img_1 img,
