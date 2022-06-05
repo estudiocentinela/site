@@ -44,13 +44,22 @@
 
 <body data-barba="wrapper">
 
+    <ul class="transition">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 
-    <main data-barba="container" data-barba-namespace="index">
+    <main data-barba="container" data-barba-namespace="home" class="Content">
 
         <section id="Header">
-            <header class="header_bar" id="nav">
-                <div id="logo"><img class="nav_icon" src="Multimedia/Icon.ico" alt=""><h1>EstudioCentinela</h1></div>
-                
+            <header class="header_bar anim-nav" id="nav">
+                <div id="logo"><img class="nav_icon" src="Multimedia/Icon.ico" alt="">
+                    <h1>EstudioCentinela</h1>
+                </div>
+
 
                 <div class="icon__menu">
                     <i class="fas fa-bars" id="btn_open"></i>
@@ -163,14 +172,44 @@
                     <img src="Multimedia/Logo-1.webp" alt="">
                 </div>
                 <div id="team_text">
-                    <h2>Nuestro Equipo</h2>
-                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repellat alias
-                        quasi
-                        nemo cum quis, quaerat minima commodi recusandae veritatis.</blockquote>
+                    <h2>Quienes somos?</h2>
+                    <blockquote>Somos un estudio que desarrolla Social-Media,
+                        Artes Gráficas, Fotografía, Ilustración, desarrollo visual y de
+                        imagen. Buscamos ser impulsores de cambios que generen bien del cliente.<br>
+                        Trabajamos en base en la responsabilidad y el sentido común para poder brindar el mejor de los
+                        tratos a quienes soliciten nuestros servicios</blockquote>
                     <cite>— Generador de Texto </cite>
                 </div>
             </div>
             <div id="Trabajos" class="article_section">
+            </div>
+            <div id="Rubros" class="article_section">
+                <h1>Rubros de trabajo</h1>
+                <div class="individual_section">
+                    <h2>Fotografía</h2>
+                    <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia repellat voluptas culpa saepe,
+                        ipsam expedita molestiae pariatur ullam aliquam beatae. Voluptate dolores asperiores ratione
+                        consequuntur ab autem fugit assumenda laudantium.</P>
+                </div>
+                <div class="individual_section">
+                    <h2>Ilustración</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, non? Explicabo consectetur
+                        saepe quidem a, earum voluptatibus corporis sed illum nihil placeat recusandae omnis, harum
+                        accusamus qui blanditiis architecto consequuntur.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum minima facilis, beatae
+                        repudiandae provident vitae animi, aperiam eius veritatis fuga adipisci? Deleniti, commodi?
+                        Architecto ut sunt reprehenderit numquam in. In atque quibusdam minima dolores accusamus eos quo
+                        laboriosam inventore, repellat recusandae temporibus repudiandae doloribus ab natus, debitis
+                        autem vero numquam odit optio dolore aliquid. Aperiam inventore ut iste voluptas, dicta
+                        obcaecati eos. Maiores saepe voluptatibus cumque quae, commodi distinctio hic id tenetur at?
+                        Ipsam, quam cumque unde ut rem quo. Possimus tenetur libero distinctio, et est, iste architecto
+                        suscipit nemo porro consequuntur laboriosam laborum dolore nihil doloremque, sunt quasi
+                        voluptates.</p>
+                </div>
+                <div class="individual_section">
+                    <h2>Desarollo de Imagen</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, laboriosam.</p>
+                </div>
             </div>
             <div id="Portafolio" class="article_section">
                 <div class="individual_port" id="Portafolio_Azul">
@@ -236,8 +275,12 @@
         </section>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 
     <script src="main.js"></script>
+
 
 </body>
 

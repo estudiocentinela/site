@@ -49,25 +49,23 @@ body {
 
 h1 {
     font-family: 'Titulo';
-    font-size: 2rem;
     font-weight: 800;
 }
 
 h2 {
     font-family: 'Titulo';
-    font-size: 2rem;
     font-weight: 500;
+    font-style: italic;
+
 }
 
 h3 {
     font-family: 'Texto';
-    font-size: 1.4rem;
     font-weight: 400;
 }
 
 h4 {
     font-family: 'Texto';
-    font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
 }
@@ -80,20 +78,17 @@ h5 {
 
 h6 {
     font-family: 'Titulo';
-    font-size: 1.5rem;
     font-weight: 300;
 }
 
 
 figcaption {
     font-family: 'Texto';
-    font-size: 1rem;
     font-weight: 800;
 }
 
 a {
     font-family: 'Texto';
-    font-size: 1.2rem;
     font-weight: 500;
     text-decoration: none;
 }
@@ -108,25 +103,21 @@ ul {
 
 p {
     font-family: 'Texto';
-    font-size: 1.2rem;
 }
 
 blockquote {
     font-family: 'Texto';
-    font-size: 2.2rem;
 }
 
 cite {
     font-family: 'Texto';
     font-style: italic;
-    font-size: 2rem;
     font-weight: 300;
     display: block;
 }
 
 figcaption {
     font-family: 'Texto';
-    font-size: 1rem;
 }
 
 @media (max-width: 8.5in) {
@@ -140,6 +131,35 @@ figcaption {
         font-size: 12px;
     }
 }
+
+/*Animacion y loader*/
+
+ul.transition{
+    display: flex;
+    position: fixed;
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    pointer-events: none;
+}
+
+ul.transition li{
+    transform: scaleY(0);
+    background: var(--background-2);
+    width: 20%;
+}
+
+.Content {
+    opacity: 0;
+}
+
+.anim-nav {
+    opacity: 1;
+}
+
 
 /*Seccion de Navegacion*/
 #Header {
@@ -202,13 +222,13 @@ figcaption {
 }
 
 .nav_open {
-    transform: translateX(23vw);
+    transform: translateX(30vw);
 }
 
 /*Barra de Navegacion Desplegable*/
 .nav_container {
     position: fixed;
-    width: 22vw;
+    width: 30vw;
     height: 100vh;
     background-color: var(--clear-nav);
     backdrop-filter: blur(4px);
@@ -288,6 +308,10 @@ figcaption {
 
     .nav_open {
         transform: translateX(101vw);
+    }
+
+    .list__item--click {
+        cursor: default;
     }
 }
 
@@ -413,7 +437,27 @@ figcaption {
     height: auto;
     width: 50%;
     padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
 }
+
+#team_text h2{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    align-self: center;
+}
+
+#team_text blockquote{
+    font-size: 1.4rem;
+}
+
+#team_text cite{
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    align-self: flex-end;
+}
+
 
 @media (max-width: 5.5in) {
     #Sobre_Nosotros {
@@ -443,19 +487,50 @@ figcaption {
 #Trabajos {
     grid-column: 1/8;
     min-height: 110vh;
-    background: #222222;
+    background-color: #262626;
 }
 
-/*Zonas de los portafolios Individuales*/
+/*Zonas de los Rubros de trabajo*/
 
-
-#Portafolio {
+#Rubros{
+    min-height: 50vh;
     grid-column: 2/7;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
     justify-content: space-around;
+    padding: 3rem 0rem;
+}
+
+.individual_section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    text-align: justify;
+    gap: 1rem;
+    row-gap: 1rem;
+}
+
+@media (max-width: 5.5in) {
+    .individual_section{
+        padding: 2rem 1rem;
+    }
+}
+
+/*Zonas de los portafolios Individuales*/
+
+
+#Portafolio {
+    grid-column: 1/8;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #262626;
+    color: var(--text-1);
 }
 
 .individual_port {
@@ -490,12 +565,12 @@ figcaption {
 }
 
 .port_gallery_1 img {
-    height: 60vh;
+    height: 70vh;
     width: 24%;
 }
 
 .port_gallery_2 img {
-    height: 60vh;
+    height: 70vh;
     width: 49%;
 }
 
@@ -602,6 +677,18 @@ figcaption {
     justify-content: space-evenly;
     align-items: flex-end;
 }
+
+
+#Contacto blockquote{
+    font-size: 1.8rem;
+}
+
+#Contacto cite{
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    align-self: flex-end;
+}
+
 
 @media (max-width: 5.5in) {
     #Contacto {
