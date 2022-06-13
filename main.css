@@ -12,13 +12,13 @@
 
 @font-face {
     font-family: Titulo;
-    src: url(Fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+    src: url(Fonts/Prueba/Oxygen-Light.ttf);
     font-display: block;
 }
 
 @font-face {
     font-family: Texto;
-    src: url(Fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+    src: url(Fonts/Prueba/Oxygen-Light.ttf);
     font-display: block;
 }
 
@@ -49,47 +49,37 @@ body {
 
 h1 {
     font-family: 'Titulo';
-    font-weight: 800;
 }
 
 h2 {
     font-family: 'Titulo';
-    font-weight: 500;
-    font-style: italic;
-
 }
 
 h3 {
     font-family: 'Texto';
-    font-weight: 400;
 }
 
 h4 {
     font-family: 'Texto';
-    font-weight: 500;
     text-decoration: none;
 }
 
 h5 {
     font-family: 'Titulo';
     font-size: 2rem;
-    font-weight: 700;
 }
 
 h6 {
     font-family: 'Titulo';
-    font-weight: 300;
 }
 
 
 figcaption {
     font-family: 'Texto';
-    font-weight: 800;
 }
 
 a {
     font-family: 'Texto';
-    font-weight: 500;
     text-decoration: none;
 }
 
@@ -112,11 +102,14 @@ blockquote {
 cite {
     font-family: 'Texto';
     font-style: italic;
-    font-weight: 300;
     display: block;
 }
 
 figcaption {
+    font-family: 'Texto';
+}
+
+span {
     font-family: 'Texto';
 }
 
@@ -134,7 +127,7 @@ figcaption {
 
 /*Animacion y loader*/
 
-ul.transition{
+ul.transition {
     display: flex;
     position: fixed;
     z-index: 3;
@@ -146,7 +139,7 @@ ul.transition{
     pointer-events: none;
 }
 
-ul.transition li{
+ul.transition li {
     transform: scaleY(0);
     background: var(--background-2);
     width: 20%;
@@ -175,7 +168,6 @@ ul.transition li{
     width: 100%;
     color: var(--text-2);
     background-color: var(--clear-nav);
-    backdrop-filter: blur(4px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -185,6 +177,7 @@ ul.transition li{
 
 .header_bar.sticky {
     background: var(--clear-sticky);
+    backdrop-filter: blur(4px);
     height: 4rem;
 }
 
@@ -199,7 +192,7 @@ ul.transition li{
     gap: .5rem;
 }
 
-.nav_icon{
+.nav_icon {
     height: 2.5rem;
     width: 2.5rem;
     object-fit: cover;
@@ -400,8 +393,8 @@ ul.transition li{
     min-height: 150vh;
     width: 100%;
     z-index: 1;
-    display: grid;
-    grid-template-columns: 5% 10% [Inicio] 10% 50% 10% [Final] 10% 5%;
+    display: flex;
+    flex-direction: column;
     background-color: #ffffff;
 }
 
@@ -413,9 +406,9 @@ ul.transition li{
 /*Seccion de Presentacion*/
 
 #Sobre_Nosotros {
-    grid-column: 2/7;
     display: flex;
     height: 100%;
+    width: 100%;
     flex-direction: row;
     align-content: center;
     align-items: center;
@@ -428,9 +421,9 @@ ul.transition li{
     object-fit: cover;
 }
 
-#team_picture img{
+#team_picture img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 #team_text {
@@ -442,17 +435,17 @@ ul.transition li{
     text-align: justify;
 }
 
-#team_text h2{
+#team_text h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     align-self: center;
 }
 
-#team_text blockquote{
+#team_text blockquote {
     font-size: 1.4rem;
 }
 
-#team_text cite{
+#team_text cite {
     font-size: 1.4rem;
     margin-top: 1.5rem;
     align-self: flex-end;
@@ -492,9 +485,8 @@ ul.transition li{
 
 /*Zonas de los Rubros de trabajo*/
 
-#Rubros{
+#Rubros {
     min-height: 50vh;
-    grid-column: 2/7;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -503,18 +495,75 @@ ul.transition li{
     padding: 3rem 0rem;
 }
 
-.individual_section{
+.individual_section {
     width: 100%;
+    display: grid;
+    grid-template-columns: 5% 10% [Inicio] 10% 50% 10% [Final] 10% 5%;
+    flex-direction: column;
+    text-align: justify;
+    justify-items: center;
+}
+
+.individualt_text {
+    grid-column: 2/7;
+    min-height: 30vh;
+    padding: 1rem 2rem;
+    row-gap: 1rem;
+    gap: 1rem;
     display: flex;
     flex-direction: column;
-    padding: 2rem 3rem;
-    text-align: justify;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.individualt_text h2 {
+    font-size: 2rem;
+}
+
+.cb {
+    grid-column: 1/8;
+    display: flex;
+    width: 98%;
+    height: 80vh;
     gap: 1rem;
-    row-gap: 1rem;
+    box-sizing: border-box;
+
+}
+
+.box {
+    flex: 1;
+    overflow: hidden;
+    transition: all 400ms;
+}
+
+.box>img {
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover;
+    transition: all 300ms;
+}
+
+.box>span {
+    font-size: 35px;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+    background-color: var(--clear-btn);
+}
+
+.box:hover {
+    flex: 50%;
+}
+
+.box:hover>img {
+    width: 100%;
+    height: 100%;
 }
 
 @media (max-width: 5.5in) {
-    .individual_section{
+    .individual_section {
         padding: 2rem 1rem;
     }
 }
@@ -559,7 +608,7 @@ ul.transition li{
     justify-content: center;
     flex-wrap: wrap;
     object-fit: cover;
-    row-gap: 1rem;
+    margin-left: 1rem;
     gap: 1rem;
     width: 50%;
 }
@@ -590,6 +639,7 @@ ul.transition li{
     height: auto;
     min-height: 20vh;
 }
+
 
 @media (max-width: 5.5in) {
     #Portafolio {
@@ -679,11 +729,11 @@ ul.transition li{
 }
 
 
-#Contacto blockquote{
+#Contacto blockquote {
     font-size: 1.8rem;
 }
 
-#Contacto cite{
+#Contacto cite {
     font-size: 1.4rem;
     margin-top: 1.5rem;
     align-self: flex-end;
@@ -750,7 +800,7 @@ ul.transition li{
     flex-wrap: nowrap;
 }
 
-.footer_bottom{
+.footer_bottom {
     width: 100%;
     height: 3.5rem;
     padding: 0 .5rem;
